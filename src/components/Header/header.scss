@@ -1,0 +1,63 @@
+@use "../../utils/variables" as *;
+
+header {
+  background-color: $dark-gray-900;
+  display: flex;
+  flex-direction: row;
+  padding: 12px 24px;
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .image {
+      height: 28px;
+      margin-right: 8px;
+    }
+
+    p {
+      color: $tiger-orange-600;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+    }
+  }
+
+  .search-wrapper {
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+
+    .search-bar {
+      background-color: $gray-900;
+      border: 1px solid $gray-700;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding: 8px 12px 8px 12px;
+      width: 60%;
+
+      /* .search-icon {
+        } */
+      .search-input {
+        background-color: $gray-900;
+        border: none;
+        color: white;
+        margin-left: 8px;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .signin {
+    flex-grow: 1;
+  }
+}

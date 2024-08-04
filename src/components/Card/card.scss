@@ -1,0 +1,119 @@
+@use "../../utils/variables" as *;
+
+p {
+  margin: 0;
+}
+
+.card-wrapper {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  overflow: hidden;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+
+  .image-section {
+    position: relative;
+
+    .card-image {
+      width: 300px;
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+
+    .status {
+      background-color: white;
+      border-radius: 8px 0 8px 0;
+      display: flex;
+      flex-direction: row;
+      padding: 8px;
+      position: absolute;
+      top: 0;
+
+      p {
+        margin: 0 0 0 10px;
+        text-wrap: nowrap;
+      }
+    }
+
+    .playlist {
+      position: absolute;
+      left: 8px;
+      bottom: 8px;
+    }
+
+    .time {
+      background-color: black;
+      border: 1px solid white;
+      border-radius: 100px;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      padding: 4px 8px 4px 8px;
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+
+      .time-icon {
+        width: 20px;
+      }
+      p {
+        margin: 0 3px 2px 8px;
+      }
+    }
+
+    .progress-wrapper {
+      position: relative;
+      height: 2px;
+      top: 0;
+      background-color: $gray-400;
+
+      .progress-bar {
+        background-color: $tiger-orange-600;
+        height: 2px;
+        width: 40%;
+      }
+    }
+  }
+
+  .content-wrapper {
+    background-color: white;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    min-height: 200px;
+
+    .eyebrow {
+      color: $gray-700;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-top: 0;
+    }
+
+    .headline {
+      color: black;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 8px 0;
+    }
+
+    .content-bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+
+      .bottom-icons {
+        margin-left: 8px;
+      }
+    }
+  }
+}

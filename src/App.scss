@@ -1,0 +1,43 @@
+body {
+  background-color: white;
+}
+
+section {
+  padding: 60px;
+  background-color: black;
+  min-height: 100vh;
+
+  @media screen and (max-width: 600px) {
+    padding: 30px;
+  }
+
+  .headline-wrapper {
+    @media screen and (max-width: 600px) {
+      text-align: center;
+    }
+
+    .headline {
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+      margin: 40px 0;
+    }
+  }
+  .results {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 3rem;
+
+    @media screen and (min-width: 600px) and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 599px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.white {
+  color: white;
+}
